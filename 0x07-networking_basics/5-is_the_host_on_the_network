@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Script to ping 5 times
-if [ "$#" -ne 1 ]; then
-   echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+# ping command usage
+if [ "$1" ]; then
+    ping -c 5 "$1"
 else
-    IP=$1
-    ping -c 5 "$IP"
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
